@@ -1,7 +1,7 @@
-import { useJotaiStore } from '../store/useJotaiStore'
+import { useJotaiStore } from '../store/useJotaiStore';
 
 export default function IndexPage() {
-  const {state, updateStateProp} = useJotaiStore();
+  const { state, updateStateProp } = useJotaiStore();
   const { status, owner, counter } = state;
 
   const hanldeClick = () => {
