@@ -12,5 +12,5 @@ export function useJotaiStore() {
     });
   }
 
-  return [state, updateStateProp];
+  return {state, updateStateProp};
 }
