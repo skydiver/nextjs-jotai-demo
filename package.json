@@ -1,5 +1,6 @@
 {
   "name": "nextjs-jotai-demo",
+  "description": "Next.js + Jotai demo app",
   "version": "1.0.0",
   "license": "MIT",
   "author": "Martín M.",
