@@ -12,5 +12,9 @@ export function useJotaiStore() {
     });
   }
 
-  return {state, updateStateProp};
+  const updateState = (newState) => {
+    setState(newState);
+  }
+
+  return {state, updateStateProp, updateState};
 }
