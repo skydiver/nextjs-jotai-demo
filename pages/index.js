@@ -1,12 +1,10 @@
 import { useJotaiStore } from '../store/useJotaiStore';
 
-export default function IndexPage() {
-  const { state, updateStateProp } = useJotaiStore();
-  const { status, owner, counter } = state;
+import Toolbar from '../components/Toolbar';
 
-  const hanldeClick = () => {
-    updateStateProp('counter', state.counter + 1);
-  };
+export default function IndexPage() {
+  const { state } = useJotaiStore();
+  const { counter } = state;
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center border-4 border-red-400 space-y-8">
@@ -16,13 +14,7 @@ export default function IndexPage() {
 
       <div className="font-bold">Counter: {counter}</div>
 
-      <button
-        type="button"
-        className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        onClick={hanldeClick}
-      >
-        Increment +1
-      </button>
+      <Toolbar />
     </div>
   );
 }
