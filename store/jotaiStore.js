@@ -1,6 +1,6 @@
 import { atom } from "jotai";
 
-export const pageStore = atom({
+export const jotaiStore = atom({
   status: "ok",
   owner: "Martín M.",
   counter: 0

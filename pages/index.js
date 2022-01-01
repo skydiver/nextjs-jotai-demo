@@ -1,21 +1,17 @@
-import { useAtom } from "jotai";
-import { pageStore } from "../store";
+import { useJotaiStore } from '../store/useJotaiStore'
 
 export default function IndexPage() {
-  const [state, setStore] = useAtom(pageStore);
+  const [state, updateStateProp] = useJotaiStore();
   const { status, owner, counter } = state;
 
   const hanldeClick = () => {
-    setStore({
-      ...state,
-      counter: state.counter + 1
-    });
+    updateStateProp('counter', state.counter + 1);
   };
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center border-4 border-red-400 space-y-8">
       <h1 className="text-3xl text-indigo-800 font-bold border-b-4 border-b-indigo-800">
-        Next.js + Jotai
+        Next.js + Jotai + Custom Hook
       </h1>
 
       <div className="font-bold">Counter: {counter}</div>

@@ -1,12 +1,12 @@
 import { useHydrateAtoms } from "jotai/utils";
-import { pageStore } from "../store";
+import { jotaiStore } from "../store/jotaiStore";
 
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   const { initialState } = pageProps;
 
-  useHydrateAtoms(initialState ? [[pageStore, initialState]] : []);
+  useHydrateAtoms(initialState ? [[jotaiStore, initialState]] : []);
 
   return <Component {...pageProps} />;
 }
