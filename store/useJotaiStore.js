@@ -6,7 +6,7 @@ export function useJotaiStore() {
   const [state, setState] = useAtom(jotaiStore);
 
   const updateStateProp = (property, value) => {
-    updateState({
+    setState({
       ...state,
       [property]: value
     });
